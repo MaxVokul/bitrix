@@ -1,6 +1,6 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Партнерам");
+$APPLICATION->SetTitle("Партнерам2");
 ?>
 
 Text here....
