@@ -1,4 +1,4 @@
-<?
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 use Bitrix\Main\Localization\Loc, Bitrix\Main\Page\Asset;
 $asset=Asset::getInstance();
 
@@ -39,7 +39,13 @@ $asset=Asset::getInstance();
             <div class="logo-block"><a href="" class="logo">Мебельный магазин</a>
             </div>
             <div class="main-phone-block">
-                <a href="tel:84952128506" class="phone">8 (495) 212-85-06</a>
+                <?if(date('H')>=8 && date('H')<=18){?>
+                <a href="tel:84952128506" class="phone">8 (495) 212-85-06
+                </a>
+                <?}else{?>
+                <a href="mailto:store@store.ru" class="phone">store@store.ru
+                </a>
+                <? } ?>
                 <div class="shedule">время работы с 9-00 до 18-00</div>
             </div>
             <div class="actions-block">
@@ -140,6 +146,7 @@ $asset=Asset::getInstance();
     </nav>
     <!-- /nav -->
     <!-- breadcrumbs -->
+    <?if(!CSite::InDir('/index.php')){?>
     <div class="breadcrumbs-box">
         <div class="inner-wrap">
             <a href="">Главная</a>
@@ -148,6 +155,7 @@ $asset=Asset::getInstance();
         </div>
     </div>
     <!-- /breadcrumbs -->
+    <? } ?>
     <!-- page -->
     <div class="page">
         <!-- content box -->
@@ -155,3 +163,8 @@ $asset=Asset::getInstance();
             <!-- content -->
             <div class="content">
                 <div class="cnt">
+                    <?if(!CSite::InDir('/index.php')){?>
+                    <header>
+                        <h1>Заголовок страницы</h1>
+                    </header>
+                    <? } ?>

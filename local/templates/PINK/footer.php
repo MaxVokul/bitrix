@@ -1,3 +1,8 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+use Bitrix\Main\Localization\Loc, Bitrix\Main\Page\Asset;
+$asset=Asset::getInstance();
+
+?>
 <?/*
 <header>
     <h1>Заголовок страницы</h1>
@@ -176,7 +181,7 @@
             </div>
         </nav>
         <div class="contacts-block">
-            <div class="title-block">Контактная информация</div>
+            <div class="title-block"><?=Loc::getMessage('FOOTER_CONTACT_INFO')?></div>
             <div class="loc-block">
                 <div class="address">ул. Летняя, стр.12, офис 512</div>
                 <div class="phone"><a href="tel:84952128506">8 (495) 212-85-06</a>
