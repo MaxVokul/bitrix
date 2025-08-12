@@ -8,7 +8,7 @@ $asset=Asset::getInstance();
 <html lang="ru">
 
 <head>
-    <title>Внутренняя</title>
+    <title><?$APPLICATION->ShowTitle()?></title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8" />
     <meta name="keywords" content="">
@@ -165,6 +165,6 @@ $asset=Asset::getInstance();
                 <div class="cnt">
                     <?if(!CSite::InDir('/index.php')){?>
                     <header>
-                        <h1>Заголовок страницы</h1>
+                        <h1><?$APPLICATION->ShowTitle(false)?></h1>
                     </header>
                     <? } ?>
